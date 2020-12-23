@@ -1,5 +1,2 @@
-* [REAMDE](README)
-* [使用手册](使用手册)
-* 文件夹目录
-    * [文件1](folder/file1)
-    * [文件2](folder/file2)
+* [知识清单](folder/知识清单)
+* [作用域](folder/作用域)
