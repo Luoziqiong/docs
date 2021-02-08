@@ -6,3 +6,5 @@
 6. `React Router`和`Vue Router`的底层实现原理，动态加载实现原理
 7. 可熟练应用`React API`、`生命周期`等，可应用`HOC`、`render props`、`Hooks`等高阶用法解决问题
 8. 基于`React`的特性的原理，可以手动实现一个简单的`React`
+
+学习框架的底层原理
