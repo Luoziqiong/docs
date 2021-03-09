@@ -34,8 +34,8 @@ function deepClone(obj, map = new WeakMap()) {
   if (obj === null || typeof obj !== 'object') return obj
 
   let newObj = Array.isArray(obj) ? [] : {}
-  if (map.get(obj)) {
-    return map.get(target)
+  if (map.has(obj)) {
+    return map.get(obj)
   }
   map.set(obj, newObj)
 
@@ -49,11 +49,10 @@ function deepClone(obj, map = new WeakMap()) {
 ### 3. 手写函数柯里化工具函数、并理解其应用场景和优势
 
 ```
-function curry(fn, args) {
-  var length = fn.length;
-  var args = args || [];
+function curry(fn, args = []) {
+  const length = fn.length;
   return function() { 
-    newArgs = args.concat(Array.prototype.slice.call(arguments));
+    const newArgs = args.concat(Array.prototype.slice.call(arguments));
     if (newArgs.length < length) {
       return curry.call(this, fn, newArgs);
     } else {
