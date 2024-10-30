@@ -49,16 +49,16 @@ function deepClone(obj, map = new WeakMap()) {
 ### 3. 手写函数柯里化工具函数、并理解其应用场景和优势
 
 ```
-function curry(fn, args = []) {
-  const length = fn.length;
-  return function() { 
-    const newArgs = args.concat(Array.prototype.slice.call(arguments));
-    if (newArgs.length < length) {
-      return curry.call(this, fn, newArgs);
+function curry(fn, ...args) {
+  const len = fn.length;
+  return function () {
+    const _args = [...args, ...arguments];
+    if (_args.length < len) {
+      return curry.call(this, fn, ..._args);
     } else {
-      return fn.apply(this, newArgs);
+      return fn.apply(this, _args);
     }
-  }
+  };
 }
 ```
 
