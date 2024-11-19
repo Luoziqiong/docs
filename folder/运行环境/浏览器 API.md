@@ -8,9 +8,23 @@ dom渲染使用requestAnimationFrame进行优化
 ### 4. 浏览器海量数据存储、操作性能优化
 ### 5. DOM 事件流的具体实现机制、不同浏览器的差异、事件代理
 ### 6. 前端发起网络请求的几种方式及其底层实现原理，可以手写原生`ajax`，`fetch`，可以熟练使用第三方库
+
+
 ### 7. 浏览器的同源策略，如何避免同源策源，几种方式的异同点以及如何选型
 
 - 同源策略：协议+域名+端口 三者相同，则认为是同源
+- 目的：保证用户星系安全，防止恶意的网站窃取数据。
+- 限制内容：
+  - Cookie、LocalStorage 和 IndexDB 无法读取。
+  - DOM 无法获得。
+  - AJAX 请求不能发送。
+- 避免的手段。
+  - 对于Cookie来说，可以将他的domain制定为二级域名，那该域名的三级域名都将可以读取该cookie
+  - 对于Iframe来说一个是可以设置window.name
+  - postMessage
+  - JSONP， 利用script标签可以跨域的特性。
+  - WebSocket
+  - CORS 服务端返回设置header，Access-Control-Allow-Origin， Access-Control-Allow-Credentials
 
 ### 8. 浏览器提供的几种存储机制、优缺点、开发中的正确的选择
 
@@ -24,8 +38,8 @@ websocket
 定时器 + 存储数据
 SharedWorker
 ### 10. 浏览器内核
-    IE: trident 内核
-    Firefox：gecko 内核
-    Safari：webkit 内核
-    Opera：以前是 presto 内核，Opera 现已改用 Google Chrome 的 Blink 内核
-    Chrome：Blink(基于 webkit，Google 与 Opera Software 共同开发)
+IE: trident 内核
+Firefox：gecko 内核
+Safari：webkit 内核
+Opera：以前是 presto 内核，Opera 现已改用 Google Chrome 的 Blink 内核
+Chrome：Blink(基于 webkit，Google 与 Opera Software 共同开发)

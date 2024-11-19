@@ -3,4 +3,4 @@ function myNew(func, ...args) {
   __obj.__proto = func.prototype;
   let result = func.call(__obj, ...args)
   return  result instanceof Object ? result : __obj;
-}
+} 

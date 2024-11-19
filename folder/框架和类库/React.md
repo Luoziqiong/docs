@@ -1,6 +1,8 @@
 1. `React`和`Vue`选项和优缺点、核心架构的区别
 2. `React`中`setState`的执行机制，如何有效的管理状态
+   
 3. `React`的事件底层实现机制
+   
 4. `React`的虚拟`DOM`和`Diff`算法的内部实现
    - 虚拟`DOM`
      - 虚拟 DOM 是 React 中一种轻量级的 javascript 独享，他是对真实 DOM 的一种抽象表示。虚拟DOM徐云React在内存中进行DOM操作，而不是直接操作真实的DOM
@@ -16,8 +18,18 @@
        - key的使用：在列表中，使用key属性可以帮助react更高效的识别哪些元素发生了变化。通过key，react可以快速找到对应的元素，而不必逐个比较。
        - 递归比较：Diff算法会递归地比较子节点，直到找到所有需要更新的部分。 
 5. `React`的`Fiber`工作原理，解决了什么问题
+   解决了渲染阻塞的问题，方案是在 setIdleRequest 的时候调用
 6. `React Router`和`Vue Router`的底层实现原理，动态加载实现原理
 7. 可熟练应用`React API`、`生命周期`等，可应用`HOC`、`render props`、`Hooks`等高阶用法解决问题
+   useLayoutEffect 和 useEffect的区别？
+   
 8. 基于`React`的特性的原理，可以手动实现一个简单的`React`
+   
+9.  组件的状态传递有哪些方式。
 
-学习框架的底层原理
+10. `state` 更新 
+    1.  异步更新：所有生命周期和合成事件里面
+    2.  同步更新：setTimeout等异步操作和原生时间里面
+    3.  批量更新原理：
+        1.  在下一次渲染前，批量更新。
+

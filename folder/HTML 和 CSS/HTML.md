@@ -32,6 +32,7 @@
 #### 事件冒泡
 事件冒泡是指当一个时间发生在某个元素上时，事件会从该元素开始向上冒泡到其父元素，直到到达`document`对象。
 没有冒泡的事件有：`focus`,`blur`,`load`,`unload`,`resize`,`scroll`,`contextmenu`,`select`,`onMouseEnter`,`onMouseLeave`
+
 #### 事件捕获
 事件捕获是从`document`对象开始向下传播到目标元素的过程。
 事件捕获并不是默认行为，通常需要再添加时间监听器时显示指定。
